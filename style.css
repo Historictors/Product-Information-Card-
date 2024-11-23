@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+*::selection{
+    background-color: rgb(0, 0, 0);
+    color: green;
+}
+
+body {
+    font-family: Poppins;
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(to bottom left, rgb(118, 147, 228), rgb(78, 199, 255));
+}
+
+.main-card {
+    position: relative;
+    overflow: hidden;
+    height: 75vh;
+    width: 50vh;
+    background-color: rgb(34, 34, 34);
+    border-radius: 28px;
+    margin: 100px auto;
+    box-shadow: 0px 0px 10px rgb(121, 120, 120);
+}
+
+.sub-card {
+    height: 62vh;
+    width: 50vh;
+    background-color: rgb(238, 238, 238);
+    border-radius: 28px;
+    overflow: hidden;
+}
+
+.title {
+    font-size: 0.7em;
+    font-family: Poppins;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    margin: 0.5em 0.5em 1rem 1rem;
+    font-weight: 500;
+    color: rgb(65, 65, 65);
+}
+.heading {
+    font-size: 2em;
+    font-weight: 700;
+    animation: heading 2 ease-in-out 1;
+}
+.wrap{
+    flex-wrap: wrap;
+}
+
+.circle-parent {
+    max-height: 13rem;
+    max-width: 13rem;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(228, 230, 230);
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.green-shoe {
+    margin: auto 0;
+    min-height: 2rem;
+    min-width: 2rem;
+    flex-shrink: 8;
+    object-fit: contain;
+    animation: juta 1.5s cubic-bezier(1, -0.01, .68, .97) 1 ;
+
+}
+@keyframes juta {
+    from {
+        transform: rotate(60deg);
+        position: relative;
+        top: 300px;
+
+    }
+
+    to {
+        transform: rotate(0deg);
+        position: relative;
+        top: 0px;
+    }
+
+
+}
+
+.radio-buttons {
+    padding-top: 2em;
+    padding-bottom: 2em;
+    padding-left: 1em;
+    color: rgb(0, 0, 0);
+    accent-color: green;
+    align-content: center;
+
+}
+.black-input{
+    accent-color: black;
+    fill: aqua;
+}
+.pointer{
+        cursor: pointer;
+}
+
+.green,
+.black {
+
+    font-size: 0.64em;
+    margin: 0 0 0 1em;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color:rgb(31, 31, 31);
+}
+.green-input,
+.black-input {
+    border: 0px;
+    width: 10%;
+    height: 2em;
+    background-color: green;
+    margin: 0 0.4em;
+}
+
+.green-shoe:hover {
+    transform: scale(120%) rotate(-40deg);
+    transition-property: transform;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+}
+
+.feedback-price{
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 5.2em;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .review:hover{
+            animation: stars 0.5s ease-in-out 1 forwards;
+  }
+  @keyframes stars {
+    from{
+
+    }
+    to{
+        transform: translateY(-10px) scale(1.5)  ;         
+    }
+  }
+  .price{
+        z-index: 0;
+  }
+  .price:hover::before{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        content: "🛒";
+                        background-color: rgb(34, 34, 34);
+                        padding: 10px;
+                        height: 40px;
+                        width: 40px;
+                        border-radius: 70%;
+                        position: absolute;
+                        bottom: 20px;
+                        right: 30px;
+                        z-index: -1;
+                        box-shadow: 0 0 3px black, inset 0 0 4px rgba(255, 255, 255, 0.473);
+                        animation: cart 0.2s cubic-bezier(0.075, 0.82, 0.165, 1) 1 forwards;
+                        cursor: pointer;
+  }
+  @keyframes cart {
+                    from{
+                        
+                    }
+                    to{
+                        transform: translateY(-30px);
+                    }
+  }
